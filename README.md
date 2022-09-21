@@ -113,7 +113,7 @@ Ignition, thrust measurement, and SD card with temperature has been combined and
 
 Output:
  ![image](https://user-images.githubusercontent.com/11870995/191512932-c3789bba-2af8-4bb1-a4bf-d7ad8bd5bd32.png)
-![image](https://user-images.githubusercontent.com/11870995/191513009-4dac2864-0324-4653-bd7d-80134f780f28.png)
+
 
 The accompanying illustration shows the overall output of avionics. The safety switch is turned on in the virtual terminal, then it is turned off since I have switched SW1, and then a countdown from 0 to 10 seconds begins once the ignition button is hit. Then, as previously said, the ignition system operates. Then The time is displayed in the first column, and the thrust value measured from the load cell is displayed in the second column. With these two, the graph can be plotted, and the nature of our motor can be understood.
  
