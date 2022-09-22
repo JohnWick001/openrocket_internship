@@ -20,18 +20,9 @@ Avionics:
 The avionics include components that collect and analyse data, such as the load cell (for measuring thrust), Temperature sensor, and the SD Card (for storing the data of thrust and temperature).
 The rocket motor is mounted on or near to the motor mount depending on the orientation of the rocket motor, and when it is fired, the load cell is deflected/compressed, resulting in the rocket motor's thrust, which is processed and stored using the avionic circuit.
 
-Why to make Rocket Motor Static Test Pad?
-Before being employed for spaceflight, launch vehicles are frequently put through system tests. Prior to launch, a fully integrated space launch vehicle and its associated ground support equipment go through a wet dress rehearsal and a more extensive static fire. During the WDR or static fire, the spacecraft or payload may or may not be attached to the launch vehicle, but enough components of the rocket and all relevant ground support equipment are in place to help verify that the rocket is ready for flight, with the goal of allowing problems to be seen before the actual launch. A wet dress rehearsal is included in the static fire test, as well as firing the engines at maximum force. The launch vehicle, with or without payload, is held firmly attached to the launch mount while the engine is operated for a few seconds. This device measures pressure, temperature, and propellant-flow gradients while testing engine start-up. The information acquired in these tests may be utilised to create a unique set of criteria that would be used in the automatic launch software's go/no-go decision tree on the actual launch day, which is usually a few days later. The engines have been fired for up to twelve seconds in some static fire tests, while shorter firings are more common.
 
 
-Architecture:
-1]DESIGN
-•	Good strength/weight ratio
-•	Good aesthetics and ergonomics
-•	Easy assemble/disassembly
-•	Includes electronics & power installation
-•	Simulate operation with minimal errors
-2]AVIONICS
+AVIONICS
 •	Acquire and process data
 •	Design electrical power system
 •	Build a test control system
@@ -40,37 +31,9 @@ Architecture:
 
 
 
-Basic components, software required to build a Static Test Pad:
 
->List of Component for design:                      >List of Component for Avionics:
+        
 
-Clamp Holder                                                                    Load Cell
-Clamp	                            HX711 
-Clamp Plate                                                                       Arduino UNO 
-      Clamp rubber                                                                    SD Card Module 
-Cover	Resistor
-Hexagonal	capacitor
-Ring(each)	LED
-Base Plate	LCD
-Rods	Buzzer
-Nuts	relay
-Bolts	battery
-	Push Button and SPDT switch
- 	Temperature senor
-
-
-•	List of Software’s used:
-
-1.Arduino IDE- used to programme Arduino to carry out particular avionics’ commands
-
-2.Proteus- used in simulating the complete Avionics.
-
-3.Fusion 360- used for designing the test pad
-
-4.Eagle CAD-used for designing the PCB for our final product avionics
-          
-	
-Procedure to build Avionics for Static Test Pad:
 
 As I was Avionics designer, I will primarily discuss about the procedure to build the avionics and little bit touch on design side. My individual contribution was Ignition, thrust measurement, GUI and complete avionics.
 
@@ -119,56 +82,3 @@ The accompanying illustration shows the overall output of avionics. The safety s
  
 Procedure to build Design stand for Static Test Pad:
 ![image](https://user-images.githubusercontent.com/11870995/191513067-85f2d946-cccd-4c34-954e-f55a76a756cc.png)
-
- 
-•	Choose best from individual contributions
-•	Hexagonal structure
-•	Clamp favored over Screws
-•	U-shaped arm with rubber coating for insulation
-	Protects user when adjusting clamp
-	Fastened onto hexagonal frame using nuts & bolts
-•	Platform to hold rectangular load cell
-CLAMPS:
-
-
-
-
-
-
-
-
-
-
-
-
-	Largest shear force
-	Optimized Factor of Safety and Weight by 
-•	Incorporating trusses
-•	Switching from ABS Plastic to SS
-
-Hexagon Support:
->Highest Factor of Safety, and Lowest amount of stress
-
-
-
-
-
-
-
-
-
-Static Stresses acting due to the clamp        	 Thermally induced stresses
-
-
-
-Observation:
-
-
->Using Arduino has some disadvantages. To begin with, it is clear that the only way to obtain data is to transfer it to an SD card. The WIFI module might be utilised for live streaming and the SD card could be used as a backup. However, the price is low, and the number of pins is limited.
->Adding a safety switch increased the safety of the user.
->Easy to assemble and disassemble, as we use nuts and bolts for entire design.
->Fit any type of motor as Clamp favored over Screws
->LED and LCD is used for safety and indication of the avionics process.
-> As the thrust value is noticed, the time in seconds is also recorded side by side, making graph plotting much easier, simpler, and more precise.
-> Hexagon Support has the highest safety factor and the lowest stress level.
-
